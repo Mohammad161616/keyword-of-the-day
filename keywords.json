@@ -1,0 +1,182 @@
+[
+  {
+    "keyword": "lambda",
+    "language": "Python",
+    "definition": "Creates a small anonymous function in a single expression. Useful for short, throwaway functions.",
+    "example": "square = lambda x: x * x\nprint(square(4))  # 16"
+  },
+  {
+    "keyword": "yield",
+    "language": "Python",
+    "definition": "Pauses a function and hands back a value, letting it resume later where it left off. Functions that use yield are called generators.",
+    "example": "def count_up(n):\n    for i in range(n):\n        yield i\n\nfor num in count_up(3):\n    print(num)  # 0, 1, 2"
+  },
+  {
+    "keyword": "with",
+    "language": "Python",
+    "definition": "Runs a block of code using a resource (like a file) and automatically cleans it up afterwards, even if an error occurs.",
+    "example": "with open('notes.txt') as f:\n    text = f.read()\n# the file is closed automatically here"
+  },
+  {
+    "keyword": "None",
+    "language": "Python",
+    "definition": "Python's value for 'nothing here'. A function that doesn't return anything gives back None.",
+    "example": "result = None\nif result is None:\n    print('No value yet')"
+  },
+  {
+    "keyword": "pass",
+    "language": "Python",
+    "definition": "A placeholder that does nothing. Use it where Python needs a statement but you have nothing to write yet.",
+    "example": "def todo_later():\n    pass"
+  },
+  {
+    "keyword": "is",
+    "language": "Python",
+    "definition": "Checks whether two names point to the exact same object, not just whether their values are equal.",
+    "example": "a = [1, 2]\nb = [1, 2]\nprint(a == b)  # True (same values)\nprint(a is b)  # False (different objects)"
+  },
+  {
+    "keyword": "except",
+    "language": "Python",
+    "definition": "Catches an error raised inside a try block so your program can handle it instead of crashing.",
+    "example": "try:\n    number = int('abc')\nexcept ValueError:\n    print('That is not a number')"
+  },
+  {
+    "keyword": "assert",
+    "language": "Python",
+    "definition": "Checks that a condition is true and raises an AssertionError if it isn't. Handy for catching bugs early.",
+    "example": "age = 21\nassert age >= 0, 'Age cannot be negative'"
+  },
+  {
+    "keyword": "global",
+    "language": "Python",
+    "definition": "Lets a function change a variable that is defined outside it at the module level.",
+    "example": "count = 0\n\ndef increment():\n    global count\n    count += 1\n\nincrement()\nprint(count)  # 1"
+  },
+  {
+    "keyword": "del",
+    "language": "Python",
+    "definition": "Removes a name, or an item from a list or dictionary.",
+    "example": "items = ['a', 'b', 'c']\ndel items[1]\nprint(items)  # ['a', 'c']"
+  },
+  {
+    "keyword": "const",
+    "language": "JavaScript",
+    "definition": "Declares a variable that can't be reassigned. Objects and arrays declared with const can still have their contents changed.",
+    "example": "const name = 'Sam';\n// name = 'Alex'; // TypeError\n\nconst list = [1];\nlist.push(2); // allowed: the array itself is not reassigned"
+  },
+  {
+    "keyword": "let",
+    "language": "JavaScript",
+    "definition": "Declares a block-scoped variable that can be reassigned later.",
+    "example": "let score = 0;\nscore = score + 10;\nconsole.log(score); // 10"
+  },
+  {
+    "keyword": "var",
+    "language": "JavaScript",
+    "definition": "The older way to declare variables. It is function-scoped rather than block-scoped, which causes surprising bugs, so let and const are preferred.",
+    "example": "if (true) {\n  var x = 5;\n}\nconsole.log(x); // 5 (leaks out of the block)"
+  },
+  {
+    "keyword": "async",
+    "language": "JavaScript",
+    "definition": "Marks a function as asynchronous. It always returns a Promise and can use await inside.",
+    "example": "async function getNumber() {\n  return 42;\n}\n\ngetNumber().then(console.log); // 42"
+  },
+  {
+    "keyword": "await",
+    "language": "JavaScript",
+    "definition": "Pauses an async function until a Promise settles, then gives you its result.",
+    "example": "async function load() {\n  const res = await fetch('data.json');\n  const data = await res.json();\n  console.log(data);\n}"
+  },
+  {
+    "keyword": "null",
+    "language": "JavaScript",
+    "definition": "Represents an intentional 'no value'. It differs from undefined, which means a value was never assigned.",
+    "example": "let user = null; // we know there is no user yet\nconsole.log(user === null); // true"
+  },
+  {
+    "keyword": "typeof",
+    "language": "JavaScript",
+    "definition": "Returns a string describing the type of a value.",
+    "example": "console.log(typeof 42);   // 'number'\nconsole.log(typeof 'hi'); // 'string'\nconsole.log(typeof null); // 'object' (a famous quirk!)"
+  },
+  {
+    "keyword": "this",
+    "language": "JavaScript",
+    "definition": "Refers to the object a function is being called on. Its value depends on how the function is called.",
+    "example": "const person = {\n  name: 'Sam',\n  greet() {\n    console.log('Hi, ' + this.name);\n  }\n};\n\nperson.greet(); // Hi, Sam"
+  },
+  {
+    "keyword": "new",
+    "language": "JavaScript",
+    "definition": "Creates a new object from a class or constructor function.",
+    "example": "class Cat {\n  constructor(name) {\n    this.name = name;\n  }\n}\n\nconst c = new Cat('Tom');\nconsole.log(c.name); // Tom"
+  },
+  {
+    "keyword": "finally",
+    "language": "JavaScript",
+    "definition": "A block that runs after try/catch whether or not an error occurred. Great for cleanup work.",
+    "example": "try {\n  riskyThing();\n} catch (e) {\n  console.log('Failed');\n} finally {\n  console.log('Always runs');\n}"
+  },
+  {
+    "keyword": "static",
+    "language": "Java",
+    "definition": "Makes a member belong to the class itself rather than to any one object, so you can use it without creating an instance.",
+    "example": "public class MathUtil {\n    public static int square(int x) {\n        return x * x;\n    }\n}\n\n// Call it directly: MathUtil.square(5);"
+  },
+  {
+    "keyword": "final",
+    "language": "Java",
+    "definition": "Prevents change. A final variable can't be reassigned, a final method can't be overridden, and a final class can't be extended.",
+    "example": "final int MAX_USERS = 100;\n// MAX_USERS = 200; // compile error"
+  },
+  {
+    "keyword": "abstract",
+    "language": "Java",
+    "definition": "Marks a class that can't be instantiated directly, or a method with no body that subclasses must implement.",
+    "example": "abstract class Shape {\n    abstract double area();\n}\n\nclass Square extends Shape {\n    double side = 2;\n    double area() { return side * side; }\n}"
+  },
+  {
+    "keyword": "interface",
+    "language": "Java",
+    "definition": "A contract that lists methods a class must provide, without saying how they work.",
+    "example": "interface Drivable {\n    void drive();\n}"
+  },
+  {
+    "keyword": "extends",
+    "language": "Java",
+    "definition": "Makes a class inherit fields and methods from another class.",
+    "example": "class Animal { }\n\nclass Dog extends Animal { }"
+  },
+  {
+    "keyword": "implements",
+    "language": "Java",
+    "definition": "Declares that a class fulfils the contract of an interface.",
+    "example": "class Car implements Drivable {\n    public void drive() {\n        System.out.println(\"Vroom\");\n    }\n}"
+  },
+  {
+    "keyword": "void",
+    "language": "Java",
+    "definition": "Used as a method's return type to say it returns nothing.",
+    "example": "public void sayHello() {\n    System.out.println(\"Hello\");\n}"
+  },
+  {
+    "keyword": "throws",
+    "language": "Java",
+    "definition": "Declares in a method's signature that it might throw a checked exception, which the caller must handle or pass on.",
+    "example": "void readFile() throws IOException {\n    // code that might fail\n}"
+  },
+  {
+    "keyword": "synchronized",
+    "language": "Java",
+    "definition": "Ensures only one thread at a time can run a block or method, which prevents data races.",
+    "example": "public synchronized void increment() {\n    count++;\n}"
+  },
+  {
+    "keyword": "instanceof",
+    "language": "Java",
+    "definition": "Checks whether an object is an instance of a given class or interface.",
+    "example": "Object o = \"hello\";\n\nif (o instanceof String) {\n    System.out.println(\"It's a String\");\n}"
+  }
+]

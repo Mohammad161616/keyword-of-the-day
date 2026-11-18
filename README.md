@@ -2,7 +2,7 @@
 
 A small web app that shows one coding keyword each day, with a plain-English definition and a short code example.
 
-**Live demo:** https://YOUR-USERNAME.github.io/keyword-of-the-day/
+**Live demo:** https://Mohammad161616.github.io/keyword-of-the-day/
 
 <!-- Add a screenshot or short GIF here, e.g. ![Screenshot](screenshot.png) -->
 

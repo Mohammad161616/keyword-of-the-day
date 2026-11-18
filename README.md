@@ -53,10 +53,6 @@ node test.js
 - [ ] Search and a full keyword library page
 - [ ] Contribution guide so others can add keywords
 
-## Built with AI assistance
-
-I used Claude (an AI assistant) to help scaffold the project: the initial structure, the starter keyword list and a first draft of the code. I reviewed the code, tested it, and I own the design decisions: starting with a web version to ship quickly, choosing date-based selection instead of a backend, and planning the widget as the next step.
-
 ## Tech
 
 HTML, CSS, vanilla JavaScript. No frameworks or build step, hosted on GitHub Pages.
